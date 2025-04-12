@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poltawski_Nowy, Poppins } from 'next/font/google'
 import "./globals.css";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { AppSidebar } from "./components/app-sidebar";
-import { Toaster } from "@/components/ui/sonner";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+
+
+const nowy = Poltawski_Nowy({
+  variable: '--font-nowy',
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const poppins = Poppins({
+  variable: '--font-pop',
+  weight: ['300', '600'],
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
@@ -28,13 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
+        className={`${poppins.variable} ${nowy.variable} antialiased bg-grayTint dark:bg-dark `}
       >
-        <SidebarProvider>
-          <AppSidebar />
-          <main className="flex-1">{children}</main>
-          <Toaster />
-        </SidebarProvider>
+            {children}
+
       </body>
     </html>
   );
