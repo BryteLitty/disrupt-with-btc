@@ -5,7 +5,7 @@
 
 @theme inline {
   --color-background: var(--background);
-  --custom-gradient': 'linear-gradient(to bottom, #B78BF2 0%, #A8FF8A 100%)';
+  --custom-gradient: linear-gradient(to bottom, #B78BF2 0%, #A8FF8A 100%);
   --font-pop:var(--font-pop);
   --font-nowy:var(--font-nowy);
   --color-foreground: var(--foreground);
@@ -44,6 +44,11 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --flash-keyframes: 
+  0%, 100% { background-color: #333333; } 
+  50% { background-color: #B78BF2; };
+
+--flash-animation: var(--flash-keyframes) 2.5s infinite;
 }
 
 :root {
