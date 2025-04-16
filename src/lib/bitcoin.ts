@@ -23,8 +23,8 @@ const DEFAULT_CONFIG: BitcoinConfig = {
   network: "regtest",
   username: "polaruser",
   password: "polarpass",
-  host: "http://127.0.0.1:18443",
-  port: 18443, // Default Polar regtest RPC port
+  host: "http://127.0.0.1:18446",
+  port: 18446, // Default Polar regtest RPC port
   timeout: 30000,
   version: "0.28.0"
 };

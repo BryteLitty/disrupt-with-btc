@@ -49,9 +49,9 @@ interface LndConfig {
 const DEFAULT_CONFIG: LndConfig = {
   // Adjust these values based on your Polar setup
   rpcServer: "localhost:10001",
-  tlsCertPath: "/Users/theophilus/.polar/networks/2/volumes/lnd/alice/tls.cert",
+  tlsCertPath: "/home/bitcoindua/.polar/networks/1/volumes/lnd/alice/tls.cert",
   macaroonPath:
-    "/Users/theophilus/.polar/networks/2/volumes/lnd/alice/data/chain/bitcoin/regtest/admin.macaroon",
+    "/home/bitcoindua/.polar/networks/1/volumes/lnd/alice/data/chain/bitcoin/regtest/invoice.macaroon",
 };
 
 export class LndClient {
